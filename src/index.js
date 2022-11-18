@@ -6,7 +6,7 @@ import ExchangeService from './exchange-service.js';
 // Business Logic
 
 async function getInput(currIn, currOut, amount) {
-  const response = await WeatherService.exchangeMoney(currIn, currOut, amount);
+  const response = await ExchangeService.exchangeMoney(currIn, currOut, amount);
   if (response.main) {
     printElements(response, currIn, currOut, amount);
   } else {
