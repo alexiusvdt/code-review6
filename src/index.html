@@ -1,0 +1,33 @@
+<html lang="en-US">
+<head>
+  <title>Currency Exchange</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Currency Exchange Rates</h1>
+    <p>Select the currency you'd like changed out and a currency you'd like changed to!</p>
+    <form>
+      <label for="currIn">What you have:</label>
+      <select id="currIn" name="currIn">
+        <option value="USD">USD - US Dollar</option>
+        <option value="AUD">AUD - Australian Dollar</option>
+        <option value="EUR">EUR - Euro</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+        <option value="KRW">KRW - South Korean Won</option>
+        <option value="ZWL">ZWL - Zimbabwean Dollar</option>
+      </select><br>
+      <label for="currOut">What you want:</label>
+      <select id="currOut"name="currOut">
+        <option value="USD">USD - US Dollar</option>
+        <option value="AUD">AUD - Australian Dollar</option>
+        <option value="EUR">EUR - Euro</option>
+        <option value="JPY">JPY - Japanese Yen</option>
+        <option value="KRW">KRW - South Korean Won</option>
+        <option value="ZWL">ZWL - Zimbabwean Dollar</option>
+      </select>
+      <button type="submit" class="btn-success" id="currencyget">Show me the money!</button>
+    </form>
+    <p id="showResponse"></p>
+  </div>
+</body>
+</html>
