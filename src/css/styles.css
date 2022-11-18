@@ -1,3 +1,9 @@
 body {
+  background-image: url(https://img.freepik.com/premium-photo/currency-symbols-background_118019-719.jpg?w=1060);
   background-color: orangered;
+}
+
+.container {
+  background-color: black;
+  color: antiquewhite;
 }

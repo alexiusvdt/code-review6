@@ -15,14 +15,9 @@ async function getInput(currIn, currOut, amount) {
   }
 }
 
-function currencyName(code)
-
-
 // UI Logic
 
 function printElements(response, currIn, currOut, amount) {
-  const fullName1 = currencyName(currIn)
-  const fullName2 = currencyName(currOut)
   document.querySelector('#showResponse').innerText = `One ${currIn} is worth ${response.conversion_rate} ${currOut}.\n
   Your ${amount} ${currIn} will buy ${response.conversion_result} ${currOut}.`;
 }
