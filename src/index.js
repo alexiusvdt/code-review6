@@ -18,7 +18,7 @@ async function getInput(currIn, currOut, amount) {
 // UI Logic
 
 function printElements(response, currIn, currOut, amount) {
-  document.querySelector('#showResponse').innerText = `${currIn} has an exchange rate of ${response.conversion_rate} to ${currOut}.\n
+  document.querySelector('#showResponse').innerText = `One ${currIn} is worth ${response.conversion_rate} ${currOut}.\n
   Your ${amount} ${currIn} will buy ${response.conversion_result} ${currOut}.`;
 }
 
