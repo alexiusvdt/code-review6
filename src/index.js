@@ -18,10 +18,10 @@ async function getInput(currIn, currOut, amount) {
 
 function printElements(response, currIn, currOut, amount) {
   document.querySelector('#showResponse').innerText = `${currIn} has an exchange rate of ${response.conversion_rate} to ${currOut}.\n
-  Your ${amount} ${currIn} will buy ${response.conversion_result} ${currOut}.`
+  Your ${amount} ${currIn} will buy ${response.conversion_result} ${currOut}.`;
 }
 
-function printError(error, city) {
+function printError(error, currIn, currOut) {
   document.querySelector('#showResponse').innerText = `There was an error in your request for ${currIn} to ${currOut}: 
   ${error}.`;
 }
@@ -29,12 +29,12 @@ function printError(error, city) {
 function handleFormSubmission(event) {
   event.preventDefault();
   const amount = document.querySelector('#amount').value;
-  const from = document.getElementById('currIn').value;
-  const to = document.getElementById('#currOut').value;
+  const from = document.getElementById('currIn');
+  const to = document.getElementById('currOut');
   const currIn = from.options[from.selectedIndex].value;
   const currOut = to.options[to.selectedIndex].value;
   document.querySelector('#currIn').value = null;
-  document.querySelector('#currout').value = null;
+  document.querySelector('#currOut').value = null;
   getInput(currIn, currOut, amount);
 }
 // size.options[size.selectedIndex].value
