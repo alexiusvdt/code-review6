@@ -15,6 +15,14 @@ async function getInput(currIn, currOut, amount) {
   }
 }
 
+function checkInteger(amount) {
+  if (isNaN(amount) === true) {
+    return false;
+  } else {
+    return true;
+  }
+}
+
 // UI Logic
 
 function printElements(response, currIn, currOut, amount) {
@@ -33,12 +41,16 @@ function printError(error, currIn, currOut) {
 
 function handleFormSubmission(event) {
   event.preventDefault();
-  const amount = document.querySelector('#amount').value;
-  const from = document.getElementById('currIn');
-  const to = document.getElementById('currOut');
-  const currIn = from.options[from.selectedIndex].value;
-  const currOut = to.options[to.selectedIndex].value;
-  getInput(currIn, currOut, amount);
+  const amount = parseInt(document.querySelector('#amount').value);
+  if (checkInteger(amount) === true) {
+    const from = document.getElementById('currIn');
+    const to = document.getElementById('currOut');
+    const currIn = from.options[from.selectedIndex].value;
+    const currOut = to.options[to.selectedIndex].value;
+    getInput(currIn, currOut, amount);
+  } else {
+    document.querySelector('#showResponse').innerText = `I'm sorry, we can only evaluate numbers. Please try again with any number.`;
+  }
 }
 
 window.addEventListener("load", function() {
