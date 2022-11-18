@@ -24,7 +24,7 @@
 
 * Clone this repo & navigate to the root directory
 * visit [Exchangerate-Api](https://www.exchangerate-api.com/) and sign up for a free API key.
-* open the .env file and add API_KEY = {your key here}. Save & close the .env file.
+* Open the .env file and add API_KEY = {your key here}. Save & close the .env file.
 * open a command line prompt
 * install all packages with $npm install
 * build the project using $npm run build

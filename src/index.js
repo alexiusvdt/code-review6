@@ -23,8 +23,12 @@ function printElements(response, currIn, currOut, amount) {
 }
 
 function printError(error, currIn, currOut) {
-  document.querySelector('#showResponse').innerText = `There was an error in your request for ${currIn} to ${currOut}: 
-  ${error}.`;
+  if (error === "unsupported-code") {
+    document.querySelector('#showResponse').innerText = `One of the currencies you selected is invalid or does not exist. Please try again.\n
+    Error details: ${error.stringify(error)}`;
+  } else {
+    document.querySelector('#showResponse').innerText = `There was an error in your request for ${currIn} to ${currOut}: ${error}.`;
+  }
 }
 
 function handleFormSubmission(event) {
