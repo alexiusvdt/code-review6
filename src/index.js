@@ -7,7 +7,8 @@ import ExchangeService from './exchange-service.js';
 
 async function getInput(currIn, currOut, amount) {
   const response = await ExchangeService.exchangeMoney(currIn, currOut, amount);
-  if (response.main) {
+  console.log("response",response);
+  if (response.result === "success") {
     printElements(response, currIn, currOut, amount);
   } else {
     printError(response, currIn, currOut, amount);
