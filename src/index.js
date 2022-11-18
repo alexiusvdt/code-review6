@@ -37,7 +37,6 @@ function handleFormSubmission(event) {
   document.querySelector('#currOut').value = null;
   getInput(currIn, currOut, amount);
 }
-// size.options[size.selectedIndex].value
 
 window.addEventListener("load", function() {
   document.querySelector('form').addEventListener("submit", handleFormSubmission);
