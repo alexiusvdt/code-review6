@@ -39,6 +39,7 @@ function printError(error, currIn, currOut) {
   }
 }
 
+
 function handleFormSubmission(event) {
   event.preventDefault();
   const amount = parseInt(document.querySelector('#amount').value);
