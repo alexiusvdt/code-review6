@@ -32,6 +32,7 @@ function printElements(response, currIn, currOut, amount) {
 
 function printError(error, currIn, currOut) {
   if (error === "unsupported-code") {
+    //If the query response doesn't include the particular currency, return nonexistant currency error.
     document.querySelector('#showResponse').innerText = `One of the currencies you selected is invalid or does not exist. Please try again.\n
     Error details: ${error.stringify(error)}`;
   } else {
